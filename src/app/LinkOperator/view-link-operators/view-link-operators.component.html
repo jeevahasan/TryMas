@@ -1,0 +1,44 @@
+
+<br>
+<br>
+<h1  style="text-align:center;">View Link Operators</h1>
+<br>
+
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-3">
+    <form class="form-group">         
+      <input class="form-control" name="searchText" placeholder="Full Name" #searchInput="ngModel" [(ngModel)]="searchText">
+  </form>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+<br>
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <th>Full Name</th>
+    <th>Area</th>
+    <th>No Of Customers</th>
+    <th>Phone No</th>
+    <th>Connection Date</th>
+    <th>Payment</th>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let customer of list">
+        <tr *ngIf="filterCondition(customer)">
+            <td>{{customer.fullName}}</td>
+            <td>{{customer.area}}</td>
+            <td>{{customer.noOfCustomers}}</td>
+            <td>{{customer.phoneNo}}</td>
+            <td>{{customer.connectionDate}}</td>
+            <td>{{customer.payment}}</td>
+          </tr>
+
+    </ng-container>
+    
+  </tbody>
+
+</table>

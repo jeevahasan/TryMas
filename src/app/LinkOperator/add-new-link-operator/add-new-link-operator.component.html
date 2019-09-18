@@ -1,0 +1,46 @@
+<br>
+<br>
+<h1  style="text-align:center;">Add New Link Operator</h1>
+<br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+      <div class="form-group">
+        <input type="text" name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" placeholder="Full Name" required>
+        <div *ngIf="fullName.touched && fullName.invalid" class="validation-error">Full Name Required</div>
+      </div>
+      <div class="form-group">
+        <input type="text" name="area" #area="ngModel" [(ngModel)]="service.formData.area" class="form-control" placeholder="Area" required>
+        <div *ngIf="area.touched && area.invalid" class="validation-error">Area Required</div>
+      </div>
+      <div class="form-group">
+        <input type="number" name="noOfCustomers" #noOfCustomers="ngModel" [(ngModel)]="service.formData.noOfCustomers" class="form-control" placeholder="No Of Customers" required>
+        <div *ngIf="noOfCustomers.touched && noOfCustomers.invalid" class="validation-error">Customers Count Required</div>
+      </div>
+      <div class="form-group">
+        <input type="number" name="phoneNo" #phoneNo="ngModel" [(ngModel)]="service.formData.phoneNo" class="form-control" placeholder="Phone No" required>
+        <div *ngIf="phoneNo.touched && phoneNo.invalid" class="validation-error">Phone Number Required</div>
+      </div>
+      <div class="form-group">
+        <input type="date" name="connectionDate" #connectionDate="ngModel" [(ngModel)]="service.formData.connectionDate" class="form-control" placeholder="Connection Date" required>
+        <div *ngIf="connectionDate.touched && connectionDate.invalid" class="validation-error">Connection Date Required</div>
+      </div>
+      <div class="form-group">
+        <input type="number" name="payment" #payment="ngModel" [(ngModel)]="service.formData.payment" class="form-control" placeholder="Monthly Payment" required>
+        <div *ngIf="payment.touched && payment.invalid" class="validation-error">Monthly Payment Required</div>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Add Link Operator</button>
+      </div>
+    </form>
+    
+    
+
+  </div>
+
+  <div class="col-md-3"></div>
+
+
+</div>
+

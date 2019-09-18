@@ -1,0 +1,32 @@
+<br>
+<br>
+<h1  style="text-align:center;">Signup</h1>
+<br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+      <div class="form-group">
+        <input type="text" name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" placeholder="Full Name" required>
+        <div *ngIf="fullName.touched && fullName.invalid" class="validation-error">Full Name Required</div>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" placeholder="Email" required>
+        <div *ngIf="email.touched && email.invalid" class="validation-error">Email No Required</div>
+      </div>
+      <div class="form-group">
+        <input type="password" name="pass" #pass="ngModel" [(ngModel)]="service.formData.pass" class="form-control" placeholder="Password" required>
+        <div *ngIf="pass.touched && pass.invalid" class="validation-error">Password Required</div>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Signup</button>
+      </div>
+    </form>
+    
+  </div>
+
+  <div class="col-md-3"></div>
+
+
+</div>
+
