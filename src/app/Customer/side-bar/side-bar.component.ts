@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.css']
 })
-export class AppComponent {
-  title = 'TryMas';
+export class SideBarComponent implements OnInit {
+
+  
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  title = 'AngularMaterialGettingStarted';
 
   isMenuOpen = true;
   contentMargin = 240;
@@ -23,4 +31,5 @@ export class AppComponent {
       this.contentMargin = 240;
     }
   }
+
 }

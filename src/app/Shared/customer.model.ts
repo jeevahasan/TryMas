@@ -1,5 +1,5 @@
 export class Customer {
-    id: String;
+    id: string;
     fullName: String;
     agreementNo: Number;
     nic: String;

@@ -32,7 +32,7 @@
   <tbody>
     <ng-container *ngFor="let customer of list">
         <tr *ngIf="filterCondition(customer)">
-            <td>{{customer.agreementNo}}</td>
+            <td (click)="onEdit(customer)">{{customer.agreementNo}}</td>
             <td>{{customer.fullName}}</td>
             <td>{{customer.nic}}</td>
             <td>{{customer.no}}</td>

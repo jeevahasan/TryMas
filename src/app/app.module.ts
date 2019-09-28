@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { FormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,9 @@ import { ViewLinkOperatorsComponent } from './LinkOperator/view-link-operators/v
 import { SignupComponent } from './Admin/signup/signup.component';
 import { SigninComponent } from './Admin/signin/signin.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SideBarComponent } from './Customer/side-bar/side-bar.component';
+import { MaterialModule } from './material-module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AddNewLinkOperatorComponent,
     ViewLinkOperatorsComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     FormsModule,
     BrowserAnimationsModule,
     AngularFireAuthModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NoopAnimationsModule,
+    MaterialModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

@@ -16,8 +16,10 @@ export class ViewCustomersComponent implements OnInit {
     this.service.getCustomers().subscribe(actionArray => {
       this.list = actionArray.map(item =>{
         return {
+          id: item.payload.doc.id,
           ...item.payload.doc.data()
-        } as Customer
+          
+        } as Customer;
       })
 
     });
@@ -25,6 +27,11 @@ export class ViewCustomersComponent implements OnInit {
 
   filterCondition(customer : Customer){
     return customer.fullName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
+  }
+
+  onEdit(customer: Customer){
+    this.service.formData = Object.assign({},customer);
+    console.log(customer);
   }
 
 }
