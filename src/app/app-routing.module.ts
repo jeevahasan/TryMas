@@ -8,6 +8,8 @@ import { ViewLinkOperatorsComponent } from "./LinkOperator/view-link-operators/v
 import { SignupComponent } from "./Admin/signup/signup.component"
 import { SigninComponent } from "./Admin/signin/signin.component"
 import { SideBarComponent } from "./Customer/side-bar/side-bar.component";
+import { AddMonthlyPaymentComponent } from "./Customer/add-monthly-payment/add-monthly-payment.component";
+import { UpdateCustomerComponent } from './Customer/update-customer/update-customer.component';
 
 const routes: Routes = [
   { path: '', component: AddCustomerComponent },
@@ -16,7 +18,8 @@ const routes: Routes = [
   { path: 'viewAllLinkOperators', component: ViewLinkOperatorsComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
-
+  { path: 'addMonthlyPayment', component: AddMonthlyPaymentComponent },
+  { path: 'updatecustomer/:id', component: UpdateCustomerComponent}
 ];
 
 @NgModule({

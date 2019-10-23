@@ -1,0 +1,32 @@
+<h1>Update Customer</h1>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <form form="ngForm" autocomplete="off">
+      <div class="form-group">
+        <input type="text" class="form-control" name="agreementNo" value={{currentCustomer.agreementNo}} disabled>
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control" name="fullName" value={{currentCustomer.fullName}} disabled>
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control" name="road" value={{currentCustomer.road}}>
+      </div>
+      <div class="form-group">
+          <input type="text" class="form-control" name="phoneNo" value={{currentCustomer.phoneNo}}>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-6">
+              <button class="btn btn-lg btn-block btn-info" type="submit">Update</button>
+          </div>
+          <div class="form-group col-md-6">
+              <button class="btn btn-lg btn-block btn-danger">Cancel</button>
+          </div>
+      </div>
+    
+    </form>
+  </div>
+  <div class="col-md-3">
+  </div>
+</div>

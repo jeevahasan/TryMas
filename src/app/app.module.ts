@@ -19,6 +19,8 @@ import { SigninComponent } from './Admin/signin/signin.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SideBarComponent } from './Customer/side-bar/side-bar.component';
 import { MaterialModule } from './material-module';
+import { AddMonthlyPaymentComponent } from './Customer/add-monthly-payment/add-monthly-payment.component';
+import { UpdateCustomerComponent } from './Customer/update-customer/update-customer.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MaterialModule } from './material-module';
     ViewLinkOperatorsComponent,
     SignupComponent,
     SigninComponent,
-    SideBarComponent
+    SideBarComponent,
+    AddMonthlyPaymentComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,
